@@ -4,6 +4,9 @@
   background-color: #47a3f3;
   color: #fefefe;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --sh-class: #2d5e9d;
@@ -30,7 +33,7 @@
 }
 
 html {
-  min-width: 360px;
+  min-width: 500px;
 }
 
 .prose .anchor {
@@ -147,4 +150,47 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+
+#GoToButton {
+  transition: .2s;
+  cursor: pointer;
+}
+
+#GoToButton:hover {
+  color: black;
+  transform: translate(-0.5rem, -0.5rem);
+  background: #ff90e8;
+  box-shadow: 0.25rem 0.25rem white;
+}
+
+/* when button pressed */
+#GoToButton:active{
+    transform:translate(0) ;
+    box-shadow: none;
+}
+
+@keyframes underlineAnimation {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 100%;
+  }
+}
+
+.hoverEffect {
+  position: relative;
+}
+
+.hoverEffect:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Start with no underline */
+  height: 5px;
+  background-color: #9F70FD;
+  animation: underlineAnimation 0.3s forwards; /* Animation duration and timing */
 }

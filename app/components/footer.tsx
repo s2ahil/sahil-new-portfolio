@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 function ArrowIcon() {
   return (
     <svg
@@ -17,44 +19,47 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="mb-16">
+    <footer className="mb-16" id="links" >
       <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="flex items-center bg-blue-700 p-4  border-[1px] border-white  rounded-xl font-bold"
+            id="GoToButton"
             rel="noopener noreferrer"
             target="_blank"
-            href="/rss"
+            href="https://www.linkedin.com/in/sahil-pradhan-46a0a31b7/"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">rss</p>
+            <p className="ml-2 h-7">Linkedln</p>
           </a>
         </li>
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="flex items-center bg-blue-700 p-4  border-[1px] border-white  rounded-xl font-bold"
+            id="GoToButton"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/vercel/next.js"
+            href="https://github.com/s2ahil/"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">github</p>
+            <p className="ml-2 h-7">Github</p>
           </a>
         </li>
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            className="flex items-center bg-blue-700 p-4  border-[1px] border-white  rounded-xl font-bold"
+            id="GoToButton"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://vercel.com/templates/next.js/portfolio-starter-kit"
+            href="https://devpost.com/s2ahil"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">view source</p>
+            <p className="ml-2 h-7">Dev Post</p>
           </a>
         </li>
       </ul>
       <p className="mt-8 text-neutral-600 dark:text-neutral-300">
-        © {new Date().getFullYear()} MIT Licensed
+        © {new Date().getFullYear()} Feel free to say hi here 👋 <span className="underline "> <a href="mailto:sahilpradhan411@gmail.com"> sahilpradhan411@gmail.com</a></span>
       </p>
     </footer>
   )
